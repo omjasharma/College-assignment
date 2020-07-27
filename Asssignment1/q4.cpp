@@ -1,25 +1,20 @@
-#include <iostream>
-#include <string.h>
+#include<iostream>
 using namespace std;
 int main()
 {
-   char letter[1000];
-   cin>>letter;
-   int n = strlen(letter);
-   int count = 0;
-   for(int i=0;i<n/2;i++)
-   {
-       if(letter[i]==letter[n-i-1])
-       {
-           count++;
-       }
-       
-   }
-   if(count == n/2)
-   {
-       cout<<"String is palindrome";
-   }else{
-       cout<<"String is not a palindrome";
-   }
-    return 0;
-}
+  int num,rev=0,rem,copy;
+  cout<<"enter any no;"<<endl;
+  cin>>num;
+  copy=num;
+  while(num>0)
+    {
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+     }
+     if(rev==copy)
+        cout<<"palindrome no";
+     else
+        cout<<"not palindrome";
+     return 0;
+} 
